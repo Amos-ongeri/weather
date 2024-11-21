@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    /* background-color: skyblue; */
+    background: #0099ff;
+}
+
+header{
+    background-color: darkorange;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+    border-bottom: 2px solid #000000;
+}
+
+#icon > a{
+    height: 45px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+    width: 40px;
+}
+
+#icon > a i{
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+}
+
+#logo p{
+    position: relative;
+}
+
+/* position the comma relative to p element */
+#logo span{
+    position: absolute;
+    top: -17px;
+    font-size: 40px;
+    font-weight: 900;
+}
+#logo h2, .comma{
+    color: #000000;
+}
+#content h2{
+    font-size: 25px;
+    transform: scaleY(3);
+    transform-origin: top; 
+    font-weight: 900;
+}
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+#heading h1{
+    font-size: 50px;
+    transform: scaleY(2);
+    transform-origin: top;
+    background: rgb(116, 56, 29);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+#weather-container{
+    background: rgba(255, 255, 255, 0.3);
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 60px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: all 1s ;
+}
+
+#hold{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+h2, label, p{
+    color: #fff;
+    margin: 8px 0;
+}
+
+.hold h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.app-description{
+    color: #000000;
+}
+
+/* attribute selector, selects input element with type attribute and "text" value */
+input[type = "text" ]{
+    height: 35px;
+    width: calc(100% - 16px);
+    border: 1px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+button{
+    height: 30px;
+    width: 100px;
+    background-color: rgb(0, 102, 255);
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* button when hovered upon */
+button:hover{
+    background-color: rgb(12, 93, 216);
+    transition: all 0.125s linear;
+}
+
+#temp-div p{
+    font-size: 60px;
+    margin-top: -30px;
+}
+
+#weather-info{
+    font-size: 20px;
+}
+
+/* style and display weather icon */
+#weather-icon{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;
+}
+
+/* display weather forecast info */
+#hourly-forecast{
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: wrap;
+    display: flex;
+    justify-content: space-between;
+}
