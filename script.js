@@ -9,7 +9,7 @@
 //   .then(data => console.log(data))
 //   .catch(error => console.log(error));
 
-//   //mwthod 2
+//   //method 2
 //   fetchData();
 //   async function fetchData(){
 //     try{
