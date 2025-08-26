@@ -1,6 +1,6 @@
 # Weather & Geolocation Map App
 
-This app is an interactive weather and map dashboard that combines real-time geolocation, weather, and forecast data with rich visualization using [Leaflet](https://leafletjs.com/) and [Chart.js](https://www.chartjs.org/). It leverages multiple APIs to provide current weather and forecast information for your location or any city you search for, overlaying weather layers on an interactive map.
+This is an interactive weather and map dashboard app that combines real-time geolocation, weather, and forecast data with visualization using [Leaflet](https://leafletjs.com/) and [Chart.js](https://www.chartjs.org/). It makes use of multiple APIs to provide current weather and forecast information for your location or any city you search, overlaying weather layers on an interactive map.
 
 ## Features
 
