@@ -5,7 +5,7 @@ export default defineConfig({
     //proxy rule for /api requests
     proxy: {
       '/api': {
-        target: 'http://localhost:5000', // your backend
+        target: 'https://weather-server-side.onrender.com', // your backend
         //rewrites header from http://localhost:5173 to the target header
         changeOrigin: true,
       }
