@@ -50,6 +50,7 @@ const fromIpwho = async ()=>{
   try{
     const geoData = await GeoLocation()
   // Get weather data from backend
+  console.log("Calling: ", `${BACKEND}/api/current?lat=${geoData.latitude}&lon=${geoData.longitude}`);
         const res = await fetch(`${BACKEND}/api/current?lat=${geoData.latitude}&lon=${geoData.longitude}`);
         if (!res.ok) throw new Error("Failed to fetch weather");
 
