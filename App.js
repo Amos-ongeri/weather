@@ -1,8 +1,9 @@
+const BACKEND = "https://weather-server-side.onrender.com";
 const GeoLocation = async ()=>{
   //current location
   try{
     //ipwho.is geolocation data for current location
-          const geoRes = await fetch('/api/geolocation')
+          const geoRes = await fetch(`${BACKEND}/api/geolocation`)
         
           if(!geoRes.ok){
               throw new Error("an error occured");
@@ -20,14 +21,14 @@ const GeoLocation = async ()=>{
 const bySearch = async (city)=>{
   try{
     //weather data by search
-    const searchRes = await fetch(`/api/weather?city=${city}`);
+    const searchRes = await fetch(`${BACKEND}/api/weather?city=${city}`);
 
     if(!searchRes.ok){
         alert('something went wrong, please enter a valid city name')
     }
 
     //forecast data
-    const forecastRes = await fetch(`/api/forecast?city=${city}`)
+    const forecastRes = await fetch(`${BACKEND}/api/forecast?city=${city}`)
 
         if(!forecastRes.ok){
             throw new Error("couldnt fetch data");
@@ -49,10 +50,10 @@ const fromIpwho = async ()=>{
   try{
     const geoData = await GeoLocation()
   // Get weather data from backend
-        const res = await fetch(`/api/current/?lat=${geoData.latitude}&lon=${geoData.longitude}`);
+        const res = await fetch(`${BACKEND}/api/current?lat=${geoData.latitude}&lon=${geoData.longitude}`);
         if (!res.ok) throw new Error("Failed to fetch weather");
 
-        const forecastRes = await fetch(`/api/forecast?city=${geoData.city}`);
+        const forecastRes = await fetch(`${BACKEND}/api/forecast?city=${geoData.city}`);
         if (!forecastRes.ok) throw new Error("Failed to fetch weather");
 
         const forecastData = await forecastRes.json();

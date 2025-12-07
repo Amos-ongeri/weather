@@ -6,7 +6,6 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://weather-server-side.onrender.com', // your backend
-        //rewrites header from http://localhost:5173 to the target header
         changeOrigin: true,
       }
     }
