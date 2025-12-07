@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="/app_climate_forecast_ui_weather_icon.svg" type="image/svg-xml">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script type="module" crossorigin src="/assets/index-Ls83D9R1.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BI8bFmlq.css">
+</head>
+<body>
+    <main id="hold">
+        <button id="forecastDetails">view weather forecast <svg height="20px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "/></svg></button>
+        <button id="mobile"><svg height="20px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "/></svg></button>
+        <div id="weather-map"></div> 
+        <div id="legend"></div>
+        <div id="weather"></div>
+        <div class="container">
+            <div id="terminate">
+                <button id='terminateBtn'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="forecastContainer"></div>
+            <div id="chartContainer">
+                <canvas id="cloudCover"></canvas>
+                <canvas id="temp"></canvas>
+                <canvas id="wind"></canvas>
+                <canvas id="pressure"></canvas>
+                <canvas id="humidity"></canvas>
+            </div>
+        </div>
+        <div id="searchDiv">
+            <button id="searchIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </button>
+            <div id="searchComponent">
+                <input type="text" name="search" id="search" placeholder="search a city...">
+                <button id="searchBtn">search</button>
+                <button id="cancelIcon">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title/><g id="cross"><line class="cls-1" x1="7" x2="25" y1="7" y2="25"/><line class="cls-1" x1="7" x2="25" y1="25" y2="7"/></g></svg>
+                </button>
+            </div>
+        </div>
+        <button id="gps">
+            <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg"><title/><g><path d="M90,42H83.3936A35.9331,35.9331,0,0,0,54,12.6064V6A6,6,0,0,0,42,6v6.6064A35.9331,35.9331,0,0,0,12.6064,42H6A6,6,0,0,0,6,54h6.6064A35.9331,35.9331,0,0,0,42,83.3936V90a6,6,0,0,0,12,0V83.3936A35.9331,35.9331,0,0,0,83.3936,54H90a6,6,0,0,0,0-12ZM48,72A24,24,0,1,1,72,48,24.0238,24.0238,0,0,1,48,72Z"/><path d="M48,36A12,12,0,1,0,60,48,12.0157,12.0157,0,0,0,48,36Z"/></g></svg>
+        </button>
+        <div id="gps-tooltip">find location</div>
+    </main>
+    <div id="loading"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
